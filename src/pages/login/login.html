@@ -1,0 +1,43 @@
+<ion-content padding>
+
+  <div class="contain">
+
+    <ion-card>
+      <ion-card-header text-center>
+        LOGIN
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="logininfor" (ngSubmit)="loginForm()">
+
+        <ion-list>
+
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="mail" item-start></ion-icon> Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="lock" item-start></ion-icon> Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <div padding>
+          <button ion-button block type="submit">Sign In</button>
+        </div>
+
+      </form>
+
+      </ion-card-content>
+
+      <div class="newreg" text-center padding>
+        <p>Don't have an account yet? </p><button ion-button color="light" clear (click)="goToRegisterPage()">REGISTER</button>
+      </div>
+    </ion-card>
+
+  </div>
+
+</ion-content>

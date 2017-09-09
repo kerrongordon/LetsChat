@@ -1,0 +1,16 @@
+page-register {
+    .backdrop {
+        background: color($colors, primary);
+        height: 250px;
+    }
+    .card {
+        margin: -150px auto 0;
+        max-width: 400px;
+    }
+    .title {
+        transform: translateY(25px);
+    }
+    p, h6, a {
+        color: color($colors, font)
+    }
+}

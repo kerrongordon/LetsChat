@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title>chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row class="inline">
+
+      <ion-col col-10>
+        <ion-item>
+          <ion-input #inputMess class="textInput" autocorrect type="text" placeholder="Type a Message" (keyup)="newMessKeyEnter($event, inputMess.value)" clearInput></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-2 end>
+        <button ion-button icon-only outline (click)="newMess($event, inputMess.value)"><ion-icon name="send"></ion-icon></button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-footer>

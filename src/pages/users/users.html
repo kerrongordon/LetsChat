@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title>users</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let user of users | async">
+      <ion-item (click)="viewProfile(user.$key)">
+        <ion-avatar item-start>
+          <img src="https://ionicframework.com/dist/preview-app/www/assets/img/avatar-ts-woody.png">
+        </ion-avatar>
+        <h2>{{ user.firstname }} {{ user.lastname }}</h2>
+        <p>This town ain't big enough for the two of us!</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="primary" (click)="addFriend(user.$key)">Add</button>
+        <button ion-button color="danger" (click)="removeFriend(user.$key)">Remove</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
